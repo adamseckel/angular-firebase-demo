@@ -1,0 +1,7 @@
+node_modules/**
+app/bower_components/**
+app/vendor/**
+test/**
+dist/**
+app/translations.js
+app/bundle.js

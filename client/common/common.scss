@@ -1,0 +1,9 @@
+@import 'colors';
+
+body {
+  // browsers default to 16px for font-size,
+  // so setting top-level font-size to 62.5%
+  // scales 1rem to equal 10px.
+  font: 62.5% 'Avenir', sans-serif;
+  background-color: $bg-color;
+}

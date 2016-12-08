@@ -1,0 +1,24 @@
+@import '../../common/colors';
+
+board {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .task-column {
+    flex-basis: 30%;
+    flex-grow: 1;
+  }
+
+  .title-padding {
+    padding: 20px 60px;
+  }
+
+  .column-padding {
+    padding: 0 40px;
+  }
+
+  .position-relative {
+    position: relative;
+  }
+}

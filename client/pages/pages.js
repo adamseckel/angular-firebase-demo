@@ -1,5 +1,8 @@
 import angular from 'angular';
+import Board from './board/board';
 
-angular.module('app.pages', [
-
+const pagesModule = angular.module('app.pages', [
+  Board.name
 ]);
+
+export default pagesModule;

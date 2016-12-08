@@ -1,49 +1,52 @@
 $offsets: 5 10 20 40 60;
+
 $directions: top bottom left right;
 
-@each $offset in $offsets {
-  @each $direction in $directions {
-    $first: slice($direction, 0, 1);
+body {
+  @each $offset in $offsets {
+    @each $direction in $directions {
+      $first: slice($direction, 0, 1);
 
-    .m#{$first}-#{$offset} {
-      margin-#{$direction}: 0px + $offset;
+      .m#{$first}-#{$offset} {
+        margin-#{$direction}: 0px + $offset;
+      }
     }
   }
-}
 
-@each $offset in $offsets {
-  @each $direction in $directions {
-    $first: slice($direction, 0, 1);
+  @each $offset in $offsets {
+    @each $direction in $directions {
+      $first: slice($direction, 0, 1);
 
-    .p#{$first}-#{$offset} {
-      padding-#{$direction}: 0px + $offset;
+      .p#{$first}-#{$offset} {
+        padding-#{$direction}: 0px + $offset;
+      }
     }
   }
-}
 
-$text-directions: left center right;
+  $text-directions: left center right;
 
-@each $direction in $text-directions {
-  .text-#{$direction} {
-    text-align: $direction;
+  @each $direction in $text-directions {
+    .text-#{$direction} {
+      text-align: $direction;
+    }
   }
-}
 
-$transforms: uppercase capitalize lowercase;
+  $transforms: uppercase capitalize lowercase;
 
-@each $transform in $transforms {
-  .text-#{$transform} {
-    text-transform: $transform;
+  @each $transform in $transforms {
+    .text-#{$transform} {
+      text-transform: $transform;
+    }
   }
-}
 
-$positions: relative absolute fixed static;
-@each $position in $positions {
-  .p-#{$position} {
-    position: $position;
+  $positions: relative absolute fixed static;
+  @each $position in $positions {
+    .p-#{$position} {
+      position: $position;
+    }
   }
-}
 
-.overflow-hidden {
-  overflow: hidden;
+  .overflow-hidden {
+    overflow: hidden;
+  }
 }

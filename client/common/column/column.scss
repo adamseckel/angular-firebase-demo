@@ -1,0 +1,16 @@
+@import '../colors';
+
+column {
+  display: block;
+  position: relative;
+  box-shadow: 0 20px 60px 10px $box-shadow-color;
+  max-width: 300px;
+  width: 100%;
+
+  .new-task-btn {
+    box-shadow: 0 10px 60px 5px $box-shadow-color;
+    position: absolute;
+    top: -27px;
+    right: -25px;
+  }
+}

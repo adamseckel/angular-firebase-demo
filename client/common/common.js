@@ -1,5 +1,12 @@
 import angular from 'angular';
+import Column from './column/column';
+import Task from './task/task';
+import NewTask from './newTask/newTask';
 
-angular.module('app.common', [
-
+const commonModule = angular.module('app.common', [
+  Column.name,
+  Task.name,
+  NewTask.name
 ]);
+
+export default commonModule;

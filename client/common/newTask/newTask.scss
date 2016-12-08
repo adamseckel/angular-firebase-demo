@@ -1,0 +1,30 @@
+@import '../colors';
+
+new-task  {
+  display: block;
+
+  form {
+    &:last-child {
+      border-bottom: 1px solid $stroke-color;
+    }
+  }
+
+  input {
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid $stroke-color;
+    transition: border-bottom-color .1s ease;
+    width: 100%;
+    font-size: 1.17em;
+    font-weight: bold;
+
+    &:focus {
+      outline: 0;
+      border-bottom-color: $dark-text-color;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $light-text-color;
+    }
+  }
+}

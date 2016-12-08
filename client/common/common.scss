@@ -1,9 +1,58 @@
 @import 'colors';
 
+html {
+  background: linear-gradient(180deg, $bg-color, $bg-bottom-color);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: $dark-text-color;
+}
+
 body {
   // browsers default to 16px for font-size,
   // so setting top-level font-size to 62.5%
   // scales 1rem to equal 10px.
-  font: 62.5% 'Avenir', sans-serif;
-  background-color: $bg-color;
+  font: 62.5% 'Helvetica', sans-serif;
+  padding: 0 0 60px 0;
+
+  hr {
+    border: 0;
+    margin: 0;
+    border-bottom: 1px solid $stroke-color;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+
+  .btn {
+    outline: 0;
+    border: 0;
+    transition: transform .3s ease;
+
+    &:active {
+      outline: 0;
+      transform: scale3d(.8, .8, 1);
+    }
+
+    &.btn-round {
+      text-align: center;
+      border-radius: 100%;
+      overflow: hidden;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      font-size: 1.5rem;
+    }
+
+    &.btn-highlight {
+      background: $highlight-color;
+      color: $forground-color;
+    }
+  }
 }

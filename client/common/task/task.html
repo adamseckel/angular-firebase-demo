@@ -1,0 +1,12 @@
+<div class="task-status">
+  <input id="{{vm.task.key}}" type="checkbox" name="task-status" ng-model="task.completed">
+  <label for="{{vm.task.key}}"></label>
+</div>
+<div class="task-details">
+  <div class="task-meta">
+    <p class="text-light" ng-bind="vm.toDateString(vm.task.createdAt)"></p>
+  </div>
+  <div class="task-name">
+    <h3 ng-bind="vm.task.name"></h3>
+  </div>
+</div>

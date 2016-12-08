@@ -21,22 +21,22 @@ let root = 'client';
 
 // helper method for resolving paths
 let resolveToApp = (glob = '') => {
-  return path.join(root, 'app', glob); // app/{glob}
+  return path.join(root, '', glob); // app/{glob}
 };
 
 let resolveToComponents = (glob = '') => {
-  return path.join(root, 'app/components', glob); // app/components/{glob}
+  return path.join(root, 'pages', glob); // app/components/{glob}
 };
 
 // map of all paths
 let paths = {
   js: resolveToComponents('**/*!(.spec.js).js'), // exclude spec files
-  scss: resolveToApp('**/*.scss'), // stylesheets
+  scss: resolveToApp('**/*.styl'), // stylesheets
   html: [
     resolveToApp('**/*.html'),
     path.join(root, 'index.html')
   ],
-  entry: path.join(__dirname, root, 'app/app.js'),
+  entry: path.join(__dirname, root, 'app.js'),
   output: root,
   blankTemplates: path.join(__dirname, 'generator', 'component/**/*.**'),
   dest: path.join(__dirname, 'dist')

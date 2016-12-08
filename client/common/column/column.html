@@ -1,0 +1,3 @@
+<button class="btn btn-round btn-highlight new-task-btn" ng-click="vm.addTask()"> + </button>
+<new-task ng-if="vm.addingTask" on-create="vm.createTask"></new-task>
+<task task="task" ng-repeat="task in vm.columnTasks"></task>

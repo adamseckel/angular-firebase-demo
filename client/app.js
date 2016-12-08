@@ -21,8 +21,7 @@ angular.module('app', [
   'ngInject';
   $locationProvider.html5Mode(true).hashPrefix('!');
 })
-.run(($rootScope, $firebaseObject, $state) => {
-
+.run(() => {
   const config = {
     apiKey: 'AIzaSyBzgXb0cOxkryHoIrvJUwpPiT0-jNnHWgs',
     authDomain: 'angular-firebase-starter.firebaseapp.com',
@@ -30,7 +29,7 @@ angular.module('app', [
     storageBucket: 'angular-firebase-starter.appspot.com',
     messagingSenderId: '924143469447'
   };
-  
+
   firebase.initializeApp(config);
 })
 .component('app', AppComponent);

@@ -1,0 +1,14 @@
+<form novalidate ng-submit="vm.onCreate(vm.task)">
+  <div class="task-status">
+    <input id="{{vm.task.id}}"type="checkbox" name="task-status" ng-model="vm.task.completed">
+    <label for="{{vm.task.id}}"></label>
+  </div>
+  <div class="task-details">
+    <div class="task-meta">
+      <p class="text-light" ng-bind="vm.toDateString(vm.task.createdAt)"></p>
+    </div>
+    <div class="task-name">
+      <input type="text" placeholder="Task Name" ng-model="vm.task.name">
+    </div>
+  </div>
+</form>

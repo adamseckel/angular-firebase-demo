@@ -1,0 +1,9 @@
+<div class="task-column" ng-repeat="column in vm.columns track by column.key">
+  <div class="title-padding">
+    <h2 class="text-uppercase" ng-bind="column.name"></h2>
+  </div>
+  <hr>
+  <div class="column-padding position-relative">
+    <column column="column" create-new-task="column.createNewTask" on-create-task="vm.createTask"></column>
+  </div>
+</div>

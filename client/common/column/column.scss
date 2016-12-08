@@ -12,5 +12,53 @@ column {
     position: absolute;
     top: -27px;
     right: -25px;
+    z-index: 200;
   }
+
+  .task-container {
+    z-index: 100;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition-property: transform;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+
+    &.offset {
+      margin-top: - (37px + 40px);
+      transform: translate3d(0, 37px + 40px, 0);
+    }
+  }
+
+  .task-dummy {
+    height: 37px + 40px;
+  }
+
+  new-task {
+    transition: transform .3s ease;
+
+    &.ng-enter {
+      transform: scale3d(1, 0, 1);
+    }
+
+    &.ng-enter-active {
+      transform: scale3d(1, 1, 1);
+    }
+    &.ng-leave.ng-leave-active {
+      transform: scale3d(1, 0, 1);
+    }
+    &.ng-leave {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  task {
+    transition: transform .3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
 }

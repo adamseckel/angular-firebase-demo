@@ -1,3 +1,7 @@
 <button class="btn btn-round btn-highlight new-task-btn" ng-click="vm.addTask()"> + </button>
 <new-task ng-if="vm.addingTask" on-create="vm.createTask"></new-task>
-<task task="task" ng-repeat="task in vm.columnTasks"></task>
+<div class="task-container" ng-class="{offset : vm.addingTask}">
+  <div class="task-dummy" ng-repeat="task in vm.columnTasks track by task.key">
+    <task style="transform: translate3d(0px, {{task.offset}}px, 0px)" task="task"></task>
+  </div>
+</div>

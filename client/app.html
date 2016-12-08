@@ -1,5 +1,9 @@
 <!-- Place all UI elements intended to be present across all routes in this file -->
-<div class="title-padding">  
+<div class="title-padding" flex row layout="space-between baseline">
   <h1>Todo Board</h1>
+  <div class="sign-in" ng-switch="!!vm.user">
+    <user-icon ng-switch-when="true" user=vm.user> </user-icon>
+    <h3 ng-switch-default ng-click="vm.signInWithTwitter()">Sign In</h3>
+  </div>
 </div>
-<board></board>
+<board user="vm.user"></board>

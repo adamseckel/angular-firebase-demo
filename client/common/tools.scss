@@ -49,4 +49,8 @@ body {
   .overflow-hidden {
     overflow: hidden;
   }
+
+  [ng-click] {
+    cursor: pointer;
+  }
 }

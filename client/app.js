@@ -7,8 +7,10 @@ import Common from './common/common';
 import Services from './services/services';
 import firebase from 'firebase';
 import 'normalize.css';
+import 'flex-attributes/flex-attributes.css';
 import './common/tools.scss';
 import './common/common.scss';
+
 
 angular.module('app', [
   uiRouter,

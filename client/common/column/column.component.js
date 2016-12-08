@@ -6,6 +6,7 @@ const columnComponent = {
   restrict: 'E',
   bindings: {
     column: '<',
+    user: '<',
     createNewTask: '<',
 
     onCreateTask: '<'

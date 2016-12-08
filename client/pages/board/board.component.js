@@ -4,7 +4,9 @@ import './board.scss';
 
 const boardComponent = {
   restrict: 'E',
-  bindings: {},
+  bindings: {
+    user: '<'
+  },
   template,
   controller,
   controllerAs: 'vm'
